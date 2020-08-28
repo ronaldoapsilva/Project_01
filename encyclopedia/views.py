@@ -2,6 +2,8 @@ from django.shortcuts import render
 
 from . import util
 
+import re
+
 
 def index(request):
     return render(request, "encyclopedia/index.html", {
@@ -11,6 +13,6 @@ def index(request):
 
 def wiki(request, title):
     return render(request, "encyclopedia/wiki.html", {
-        "title": util.get_entry(title),
+        "title": re.split(r'\n', util.get_entry(title)),
         "header": title
     })

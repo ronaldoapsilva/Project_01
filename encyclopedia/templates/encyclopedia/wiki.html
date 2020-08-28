@@ -2,11 +2,13 @@
 <html lang="en">
 
 <head>
-    <title>{{header}}</title>
+    <title>{{title.0}}</title>
 </head>
 
 <body>
-    {{ title }}
+    {% for entry in title %}
+    <p>{{ entry }}</p>
+    {% endfor %}
 </body>
 
 </html>
