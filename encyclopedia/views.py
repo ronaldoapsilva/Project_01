@@ -12,10 +12,10 @@ def index(request):
 
 
 def wiki(request, title):
-    if title in util.list_entries():
+    try:
         return render(request, "encyclopedia/wiki.html", {
             "title": re.split(r'\n', util.get_entry(title)),
             "header": title
         })
-    else:
+    except:
         return render(request, "encyclopedia/404.html")
