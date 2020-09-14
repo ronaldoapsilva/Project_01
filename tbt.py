@@ -1,7 +1,7 @@
 import re
 
-L = ['CSS', 'Django', 'Git', 'HTML', 'Python']
-A = 'css'
+entries = ['CSS', 'Django', 'Git', 'HTML', 'Python']
 
+m = 'css'
 
-print(None != None)
+print(re.findall(r"^?c", 'CSS', flags=re.IGNORECASE))

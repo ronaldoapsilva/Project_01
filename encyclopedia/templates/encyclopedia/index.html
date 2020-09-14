@@ -5,7 +5,12 @@ Encyclopedia
 {% endblock %}
 
 {% block body %}
+
+{% if search %}
+<h2>Searching for {{ value }}</h2>
+{% else %}
 <h1>All Pages</h1>
+{% endif %}
 
 <ul>
     {% for entry in entries %}
